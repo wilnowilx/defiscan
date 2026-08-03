@@ -1,52 +1,39 @@
 ---
-chain: megaeth
-type: Lending
+chain: MegaETH
+protocol: Kumbaya
 stage: 0
-protocols:
-  - Kumbaya
 reasons:
   - No audit
   - Anonymous team
 risks:
-  L:
-    H:
-      - No audit
-      - Anonymous team
-    M: []
-    L: []
-  H:
-    H: []
-    M: []
-    L: []
-  M:
-    H: []
-    M: []
-    L: []
+  - L
+  - H
+  - H
+  - H
+  - L
 author: wilnowilx
 submission_date: 2026-08-03
 publish_date: 2026-08-03
 update_date: 1970-01-01
 stage_requirements:
-  text: Assets are not in custody by a centralized entity
-  status: unknown
-  text: All contracts are verified
-  status: unknown
-  text: Source-available codebase
-  status: unknown
-  text: Public documentation exists
-  status: unknown
-  text: Upgrades with potential of "loss of funds" not protected with Exit Window >= 7 days OR a sufficient Security Council
-  status: unknown
-  text: Dependency with a High centralization score without mitigation
-  status: unknown
-  text: Frontend backups or self-hosting option exists
-  status: unknown
-  text: Upgrades with potential of "loss of funds or unclaimed yield" not protected with onchain governance AND Exit Window >= 30 days
-  status: unknown
-  text: Dependencies with High or Medium centralization score and no mitigations.
-  status: unknown
-  text: Alternative third-party frontends exist
-  status: unknown
+  [
+    [
+      { text: "Assets are not in custody by a centralized entity", status: "unknown" },
+      { text: "All contracts are verified", status: "unknown" },
+      { text: "Source-available codebase", status: "unknown" },
+      { text: "Public documentation exists", status: "unknown" },
+    ],
+    [
+      { text: "Upgrades with potential of loss of funds not protected with Exit Window >= 7 days OR a sufficient Security Council", status: "unknown" },
+      { text: "Dependency with a High centralization score without mitigation", status: "unknown" },
+      { text: "No Frontend backup or self-hosting option exists", status: "unknown" },
+    ],
+    [
+      { text: "Upgrades with potential of loss of funds or unclaimed yield not protected with onchain governance AND Exit Window >= 30 days", status: "unknown" },
+      { text: "Dependencies with High or Medium centralization score and no mitigations.", status: "unknown" },
+      { text: "No alternative third-party frontends exist", status: "unknown" },
+    ],
+  ]
 ---
 
 # Summary
@@ -59,19 +46,19 @@ The protocol has not undergone any formal security audit. The development team b
 
 ## Chain
 
-The report covers Kumbaya deployed on MegaETH. MegaETH is a high-performance EVM chain. The chain itself achieves a *Low* centralization risk score as a Layer 1 blockchain with decentralized validator set.
+The report covers Kumbaya deployed on MegaETH. MegaETH is a high-performance EVM chain.
 
 > Chain score: Low
 
 ## Upgradeability
 
-The protocol's upgradeability risk cannot be fully assessed due to the lack of audit and anonymous team. No verified source code was available for analysis at the time of this review. The absence of a security audit and the anonymous nature of the team represent significant trust assumptions.
+The protocol's upgradeability risk cannot be fully assessed due to the lack of audit and anonymous team. No verified source code was available for analysis at the time of this review.
 
 > Upgradeability score: High (unaudited, anonymous team)
 
 ## Autonomy
 
-The protocol's autonomy score cannot be fully assessed. No information on oracle dependencies, cross-chain bridges, or external price feeds was available.
+The protocol's autonomy score cannot be fully assessed. No information on oracle dependencies or cross-chain bridges was available.
 
 > Autonomy score: High (insufficient data)
 
